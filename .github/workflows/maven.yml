@@ -2,7 +2,7 @@ name: Test Automation Workflow
 
 on:
   schedule:
-  -cron: 00 18 * * *
+    - cron: "00 18 * * *"
   push:
     branches: [ "master" ]
   pull_request:
@@ -10,7 +10,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -23,45 +22,23 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+    
     - name: Running Test Automation Framework with Maven
       run: mvn test -X -Dbrowser=chrome -DisLambdaTest=true -DisHeadless=false
       
     - name: Upload Test logs
-      if:always()
+      if: always()
       uses: actions/upload-artifact@v4.6.1
       with:
-      name: Test logs
-      path: logs/
+        name: Test logs
+        path: logs/
 
-           
     - name: Upload Test Reports
-      if:always()
+      if: always()
       uses: actions/upload-artifact@v4.6.1
       with:
-      name: Test Reports
-      path: report.html
+        name: Test Reports
+        path: report.html
 
-      name: Test Execution Status
+    - name: Test Execution Status
       run: echo "Test Execution completed"
-      
-         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-    
