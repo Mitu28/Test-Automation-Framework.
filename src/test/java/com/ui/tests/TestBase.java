@@ -45,12 +45,12 @@ public class TestBase {
 		return homePage;
 	}
 
-	//@AfterMethod(description = "Tear Down the browser")
-	//public void tearDown() {
-		//if (isLambdaTest) {
-			//LambdaTestUtility.quitSession();
-		//} else if (homePage != null && homePage.getDriver() != null) { // Added null check
-		//	homePage.getDriver().quit();
-		//}
-	//}
+	@AfterMethod(description = "Tear Down the browser")
+	public void tearDown() {
+	if (isLambdaTest) {
+			LambdaTestUtility.quitSession();
+		} else if (homePage != null && homePage.getDriver() != null) { // Added null check
+			homePage.getDriver().quit();
+		}
+	}
 }
