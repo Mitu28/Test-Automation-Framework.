@@ -15,7 +15,7 @@ public class LambdaTestUtility {
 	 private static ThreadLocal <DesiredCapabilities >capabilitiesLocal=new ThreadLocal<DesiredCapabilities>();
 	 
 	 
-	 public static  WebDriver initializeLambdaTestSessioon(String browser,String testName) {
+	 public static  WebDriver initializeLambdaTestSession(String browser,String testName) {
 		 DesiredCapabilities capabilities = new DesiredCapabilities();
 	        capabilities.setCapability("browserName", browser);
 	        capabilities.setCapability("browserVersion", "127");

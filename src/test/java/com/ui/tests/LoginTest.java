@@ -26,46 +26,45 @@ import static org.testng.Assert.assertNotNull;
 
 public class LoginTest extends TestBase {
 
-	
-Logger logger=LoggerUtility.getLogger(getClass());
+	Logger logger = LoggerUtility.getLogger(getClass());
 
-  
-    @Test(description="Verifies whether valid user is able to login into the application ",groups= {"e2e" ,"sanity"},dataProviderClass=com.ui.dataproviders.LoginDataProvider.class,dataProvider="LoginTestDataProvider")
+	@Test(description = "Verifies whether valid user is able to login into the application ", groups = { "e2e",
+			"sanity" }, dataProviderClass = com.ui.dataproviders.LoginDataProvider.class, dataProvider = "LoginTestDataProvider")
 
-    public void loginTest(User user) {
-    	 System.out.println("User email: " + user.getEmailAddress());
-    	    System.out.println("User password: " + user.getPassword());
-    	    // Check if homePage is properly initialized
-    	    assertNotNull(homePage, "homePage is null");
-    	assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(),user.getPassword()).getUserName(),"Mits K");
+	public void loginTest(User user) {
+		System.out.println("User email: " + user.getEmailAddress());
+		System.out.println("User password: " + user.getPassword());
+		// Check if homePage is properly initialized
+		assertNotNull(homePage, "homePage is null");
+		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
+				"Mits K");
 
-    	
-    }
-    
-    
+	}
 
-   // @Test(description="Verifies whether valid user is able to login into the application ",groups= {"e2e" ,"sanity"},dataProviderClass=com.ui.dataproviders.LoginDataProvider.class,dataProvider="LoginTestCSVDataProvider")
+	@Test(description = "Verifies whether valid user is able to login into the application ", groups = { "e2e",
+			"sanity" }, dataProviderClass = com.ui.dataproviders.LoginDataProvider.class, dataProvider = "LoginTestCSVDataProvider")
 
-    // public void loginCSVTest(User user) {
-   
-    // System.out.println("User email: " + user.getEmailAddress());
-    //  System.out.println("User password: " + user.getPassword());
-    	    // Check if homePage is properly initialized
-    //  assertNotNull(homePage, "homePage is null");
-    //assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(),user.getPassword()).getUserName(),"Mits K");
+	public void loginCSVTest(User user) {
 
+		System.out.println("User email: " + user.getEmailAddress());
+		System.out.println("User password: " + user.getPassword());
+		// Check if homePage is properly initialized
+		assertNotNull(homePage, "homePage is null");
+		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
+				"Mits K");
 
-    	
-    //}
-    //@Test(description="Verifies whether valid user is able to login into the application ",groups= {"e2e" ,"sanity"},dataProviderClass=com.ui.dataproviders.LoginDataProvider.class,dataProvider="LoginTestExcelDataProvider")
+	}
 
-    //public void loginExcelTest(User user) {
-    // System.out.println("User email: " + user.getEmailAddress());
-    //  System.out.println("User password: " + user.getPassword());
-    	    // Check if homePage is properly initialized
-    //  assertNotNull(homePage, "homePage is null");
-    //assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(),user.getPassword()).getUserName(),"Mits K");
+	//@Test(description = "Verifies whether valid user is able to login into the application ", groups = { "e2e",
+		//	"sanity" }, dataProviderClass = com.ui.dataproviders.LoginDataProvider.class, dataProvider = "LoginTestExcelDataProvider")
 
-    	
-    // }
+	//public void loginExcelTest(User user) {
+	//	System.out.println("User email: " + user.getEmailAddress());
+	//	System.out.println("User password: " + user.getPassword());
+		// Check if homePage is properly initialized
+		//assertNotNull(homePage, "homePage is null");
+		//assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
+		//		"Mits K");
+
+	//}
 }

@@ -7,23 +7,18 @@ import org.apache.logging.log4j.Logger;
 
 public class LoggerUtility {
 	
-	private LoggerUtility() {
-		
-			
-		}
+	 private LoggerUtility() {
+	        // Private constructor to prevent instantiation
+	    }
+
+	    public static Logger getLogger(Class<?> clazz) {
+	        return LogManager.getLogger(clazz);
+	    }
 		
 	
 
 
 
 
-public static Logger getLogger(Class<?>clazz) {
-Logger logger=null;
-	if(logger==null) {
-	
-	logger = LogManager.getLogger((clazz));
-	}
-	return logger;
-}
 	
 }
