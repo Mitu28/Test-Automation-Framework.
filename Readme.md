@@ -22,7 +22,7 @@ EmailAddress:mitukumari2024@gmail.com
 ## 🚀 About Me
 Hi,My Name is Mitu Kumari.I have 7 years of Experience in Automation and Manual Testing using technologies  like Selenium Webdriver,RestAssured,Postman
 
-My major expertise is in Java Programming language .
+
 
 
 # Test Automation Framework
