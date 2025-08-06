@@ -20,7 +20,7 @@ EmailAddress:mitukumari2024@gmail.com
 
 
 ## 🚀 About Me
-Hi,My Name is Mitu Kumari.I have 7 years of Experience in Automation and Manual Testing using technologies  like Selenium Webdriver,RestAssured,Postman
+Hi,My Name is Mitu Kumari.I have 8 years of Experience in Automation and Manual Testing using technologies  like Selenium Webdriver,RestAssured,Postman
 
 
 
@@ -134,3 +134,4 @@ The test will be executed at 11:30 pm IST every single day.
 
 The reprts will be archived in gh-pages.
 You can view the html reports at https://github.com/Mitu28/Test-Automation-Framework/report.html
+
